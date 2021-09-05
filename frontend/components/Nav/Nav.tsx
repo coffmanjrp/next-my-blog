@@ -11,9 +11,9 @@ type Nav = {
 const Nav: FC<Nav> = ({ title }) => {
   return (
     <nav className="flex items-center bg-white z-20 fixed top-0 left-0 right-0 h-16 px-6 bg-opacity-[0.97]">
-      <div className="flex items-center mr-10 md:flex-initial flex-1">
+      <div className="mr-10 md:flex-initial flex-1">
         <Link href="/">
-          <a className="text-lg no-underline text-current inline-flex items-center hover:opacity-75">
+          <a className="text-lg text-gray-600 no-underlin hover:opacity-75">
             {title}
           </a>
         </Link>
@@ -23,7 +23,7 @@ const Nav: FC<Nav> = ({ title }) => {
           navLinks.map((link) => (
             <li key={link.id}>
               <Link href={link.url}>
-                <a className="no-underline text-current inline-flex items-center hover:opacity-75">
+                <a className="text-base text-gray-600 no-underline hover:opacity-75">
                   {link.text}
                 </a>
               </Link>
@@ -33,13 +33,13 @@ const Nav: FC<Nav> = ({ title }) => {
       <SearchBox />
       <button
         type="button"
-        className="text-2xl text-current p-2 cursor-pointer"
+        className="text-2xl text-gray-600 p-2 cursor-pointer hover:opacity-75 focus:outline-none focus:ring"
       >
         <IconContainer icon={<FaMoon />} />
       </button>
       <a
         href="https://github.com/coffmanjrp"
-        className="text-2xl text-current p-2 cursor-pointer"
+        className="block text-2xl text-gray-600 p-2 cursor-pointer hover:opacity-75 focus:outline-none focus:ring"
         target="_blank"
         rel="noreferrer noopener"
       >

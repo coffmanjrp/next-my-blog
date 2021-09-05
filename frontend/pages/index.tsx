@@ -7,7 +7,7 @@ const Home: NextPage = () => {
     <div className="min-h-screen h-screen flex flex-col justify-center items-center px-6 py-0">
       <NextSeo />
       <Nav title="coffmanjrp.io" />
-      <main className="max-w-screen-md mx-auth pt-16 h-screen">
+      <main className="max-w-screen-md mx-auth pt-24 h-screen">
         <h1 className="text-5xl font-bold">Hi! I’m Paul Coffman Jr.</h1>
         <p className="text-3xl text-gray-600 my-5">
           Frontend, Backend, Web developer
