@@ -1,3 +1,5 @@
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
 module.exports = {
   stories: ['../**/**/*.stories.mdx', '../**/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
@@ -6,10 +8,7 @@ module.exports = {
     '@storybook/addon-controls',
   ],
   webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
-    });
+    config.resolve.plugins = [new TsconfigPathsPlugin()];
 
     return config;
   },
