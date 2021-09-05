@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Nav from './Nav';
 
 export default {
-  title: 'Example/Nav',
+  title: 'coffmanjrp.io/Nav',
   component: Nav,
 } as ComponentMeta<typeof Nav>;
 

@@ -1,6 +1,6 @@
 const SearchBox = () => {
   return (
-    <div className="mr-2 md:inline-block hiddend">
+    <div className="mr-2 md:inline-block hidden">
       <div className="relative w-full md:w-64">
         <input
           type="search"
