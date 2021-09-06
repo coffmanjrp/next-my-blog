@@ -13,10 +13,10 @@ const Home: NextPage = () => {
       <Nav title={title} showMenu={showMenu} setShowMenu={setShowMenu} />
       <main className="max-w-screen-md mx-auth pt-48 md:pt-24 h-screen">
         <h1 className="text-5xl font-bold">Hi! I’m Paul Coffman Jr.</h1>
-        <p className="text-3xl text-gray-600 my-5">
+        <p className="text-3xl text-gray-600 my-5  dark:text-white">
           Frontend, Backend, Web developer
         </p>
-        <p className="text-base text-gray-600">
+        <p className="text-base text-gray-600  dark:text-white">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry&apos;s standard dummy text
           ever since the 1500s, when an unknown printer took a galley of type

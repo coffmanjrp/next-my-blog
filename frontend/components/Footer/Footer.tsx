@@ -10,13 +10,13 @@ const Footer: FC<Footer> = ({ title }) => {
   return (
     <footer className="mt-24 max-w-screen-md w-full mx-auth pt-4 pb-16 z-20">
       <div className="flex justify-between flex-col-reverse md:flex-row items-center">
-        <p className="text-gray-600">
+        <p className="text-gray-600  dark:text-white">
           {new Date().getFullYear()} &copy; {title}
         </p>
         <div className="flex gap-2 md:mb-0 mb-2">
           <a
             href="https://github.com/coffmanjrp"
-            className="block text-2xl text-gray-600 p-2 cursor-pointer hover:opacity-75 focus:outline-none focus:ring"
+            className="block text-2xl text-gray-600 p-2 cursor-pointer hover:opacity-75 focus:outline-none focus:ring  dark:text-white"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -24,7 +24,7 @@ const Footer: FC<Footer> = ({ title }) => {
           </a>
           <a
             href="https://twitter.com/"
-            className="block text-2xl text-gray-600 p-2 cursor-pointer hover:opacity-75 focus:outline-none focus:ring"
+            className="block text-2xl text-gray-600 p-2 cursor-pointer hover:opacity-75 focus:outline-none focus:ring dark:text-white"
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -32,7 +32,7 @@ const Footer: FC<Footer> = ({ title }) => {
           </a>
           <a
             href="https://linkedin.com/"
-            className="block text-2xl text-gray-600 p-2 cursor-pointer hover:opacity-75 focus:outline-none focus:ring"
+            className="block text-2xl text-gray-600 p-2 cursor-pointer hover:opacity-75 focus:outline-none focus:ring dark:text-white"
             target="_blank"
             rel="noreferrer noopener"
           >
