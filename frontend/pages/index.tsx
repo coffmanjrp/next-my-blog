@@ -1,13 +1,17 @@
-import type { NextPage } from 'next';
+import { useState } from 'react';
 import { NextSeo } from 'next-seo';
-import { Footer, Nav } from '@/components/index';
+import { Footer, Nav, MobileMenu } from '@/components/index';
+import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
+  const title = 'coffmanjrp.io';
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+
   return (
     <div className="min-h-screen h-screen flex flex-col justify-center items-center px-6 py-0">
       <NextSeo />
-      <Nav title="coffmanjrp.io" />
-      <main className="max-w-screen-md mx-auth pt-24 h-screen">
+      <Nav title={title} showMenu={showMenu} setShowMenu={setShowMenu} />
+      <main className="max-w-screen-md mx-auth pt-48 md:pt-24 h-screen">
         <h1 className="text-5xl font-bold">Hi! I’m Paul Coffman Jr.</h1>
         <p className="text-3xl text-gray-600 my-5">
           Frontend, Backend, Web developer
@@ -24,7 +28,8 @@ const Home: NextPage = () => {
           including versions of Lorem Ipsum.
         </p>
       </main>
-      <Footer title="coffmanjrp.io" />
+      <MobileMenu showMenu={showMenu} />
+      <Footer title={title} />
     </div>
   );
 };

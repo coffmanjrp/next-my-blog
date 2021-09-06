@@ -8,7 +8,7 @@ type Footer = {
 
 const Footer: FC<Footer> = ({ title }) => {
   return (
-    <footer className="mt-24 max-w-screen-md w-full mx-auth pt-4 pb-16">
+    <footer className="mt-24 max-w-screen-md w-full mx-auth pt-4 pb-16 z-20">
       <div className="flex justify-between flex-col-reverse md:flex-row items-center">
         <p className="text-gray-600">
           {new Date().getFullYear()} &copy; {title}

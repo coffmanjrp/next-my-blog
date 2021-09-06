@@ -1,6 +1,12 @@
-const SearchBox = () => {
+import { FC } from 'react';
+
+type SearchBox = {
+  isMobileMenu: boolean;
+};
+
+const SearchBox: FC<SearchBox> = ({ isMobileMenu }) => {
   return (
-    <div className="mr-2 md:inline-block hidden">
+    <div className={`md:mr-2 md:inline-block ${isMobileMenu ? '' : 'hidden'} `}>
       <div className="relative w-full md:w-64">
         <input
           type="search"

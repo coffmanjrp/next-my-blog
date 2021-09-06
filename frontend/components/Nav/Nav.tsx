@@ -1,17 +1,19 @@
-import { FC } from 'react';
+import { Dispatch, FC, SetStateAction } from 'react';
 import Link from 'next/link';
-import { FaMoon, FaGithub } from 'react-icons/fa';
+import { FaMoon, FaGithub, FaBars, FaTimes } from 'react-icons/fa';
 import { IconContainer, SearchBox } from '@/components/index';
 import { navLinks } from '@/utils/links';
 
 type Nav = {
   title: string;
+  showMenu: boolean;
+  setShowMenu: Dispatch<SetStateAction<boolean>>;
 };
 
-const Nav: FC<Nav> = ({ title }) => {
+const Nav: FC<Nav> = ({ title, showMenu, setShowMenu }) => {
   return (
-    <nav className="flex items-center bg-white z-20 fixed top-0 left-0 right-0 h-16 px-6 bg-opacity-[0.97]">
-      <div className="mr-10 md:flex-initial flex-1">
+    <nav className="fixed top-0 left-0 right-0 flex items-center px-6 h-16 bg-white bg-opacity-75 z-20">
+      <div className="md:flex-initial flex-1 mr-10">
         <Link href="/">
           <a className="text-lg text-gray-600 no-underlin hover:opacity-75">
             {title}
@@ -30,10 +32,10 @@ const Nav: FC<Nav> = ({ title }) => {
             </li>
           ))}
       </ul>
-      <SearchBox />
+      <SearchBox isMobileMenu={false} />
       <button
         type="button"
-        className="text-2xl text-gray-600 p-2 cursor-pointer hover:opacity-75 focus:outline-none focus:ring"
+        className="block text-2xl text-gray-600 p-2 cursor-pointer hover:opacity-75 focus:outline-none focus:ring"
       >
         <IconContainer icon={<FaMoon />} />
       </button>
@@ -45,6 +47,13 @@ const Nav: FC<Nav> = ({ title }) => {
       >
         <IconContainer icon={<FaGithub />} />
       </a>
+      <button
+        type="button"
+        className="block text-2xl text-gray-600 p-2 cursor-pointer hover:opacity-75 focus:outline-none focus:ring md:hidden "
+        onClick={() => setShowMenu((prev) => !prev)}
+      >
+        <IconContainer icon={showMenu ? <FaTimes /> : <FaBars />} />
+      </button>
     </nav>
   );
 };
