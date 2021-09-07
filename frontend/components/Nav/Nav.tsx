@@ -1,7 +1,8 @@
 import { Dispatch, FC, SetStateAction } from 'react';
 import Link from 'next/link';
-import { FaMoon, FaGithub, FaBars, FaTimes } from 'react-icons/fa';
 import { useTheme } from 'next-themes';
+import { FaGithub, FaBars, FaTimes } from 'react-icons/fa';
+import { FiMoon, FiSun } from 'react-icons/fi';
 import { IconContainer, SearchBox } from '@/components/index';
 import { navLinks } from '@/utils/links';
 
@@ -15,7 +16,7 @@ const Nav: FC<Nav> = ({ title, showMenu, setShowMenu }) => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 flex items-center px-6 h-16 bg-gray-50 bg-opacity-75 z-20 dark:bg-gray-900 dark:bg-opacity-100">
+    <nav className="fixed top-0 left-0 right-0 flex items-center px-6 h-16 bg-gray-50 bg-opacity-75 backdrop-filter backdrop-blur-md z-20 dark:bg-gray-900 dark:bg-opacity-100">
       <div className="md:flex-initial flex-1 mr-10">
         <Link href="/">
           <a className="text-lg">{title}</a>
@@ -37,7 +38,7 @@ const Nav: FC<Nav> = ({ title, showMenu, setShowMenu }) => {
         className="block text-2xl text-gray-600 p-2 hover:opacity-75 dark:text-gray-50"
         onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       >
-        <IconContainer icon={<FaMoon />} />
+        <IconContainer icon={theme === 'dark' ? <FiMoon /> : <FiSun />} />
       </button>
       <a
         href="https://github.com/coffmanjrp"
