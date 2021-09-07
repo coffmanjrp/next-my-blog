@@ -11,7 +11,10 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^11.1.2",
     "next": "11.1.2",
+    "next-mdx-remote": "^3.0.4",
     "next-seo": "^4.26.0",
     "next-themes": "^0.0.15",
     "react": "17.0.2",

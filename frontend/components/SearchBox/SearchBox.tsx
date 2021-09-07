@@ -1,10 +1,10 @@
 import { FC } from 'react';
 
-type SearchBox = {
+type Props = {
   isMobileMenu: boolean;
 };
 
-const SearchBox: FC<SearchBox> = ({ isMobileMenu }) => {
+const SearchBox: FC<Props> = ({ isMobileMenu }) => {
   return (
     <div className={`md:mr-2 md:inline-block ${isMobileMenu ? '' : 'hidden'} `}>
       <div className="relative w-full md:w-64">

@@ -1,14 +1,14 @@
 import { FC, ReactElement } from 'react';
 import { IconContext } from 'react-icons';
 
-type IconContainer = {
+type Props = {
   icon: ReactElement;
   className?: string;
   color?: string;
   size?: string;
 };
 
-const IconContainer: FC<IconContainer> = ({ icon, className, color, size }) => {
+const IconContainer: FC<Props> = ({ icon, className, color, size }) => {
   return (
     <IconContext.Provider value={{ className, color, size }}>
       {icon}
