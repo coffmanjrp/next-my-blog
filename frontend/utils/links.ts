@@ -41,7 +41,8 @@ export const footerLinks = [
   },
   {
     id: 4,
-    url: 'mailto:coffmanjrp@gmail.com?subject=【Mail to coffmanjrp.io】',
+    url:
+      'mailto:coffmanjrp@gmail.com?subject=%E3%80%90Mail%20to%20coffmanjrp.io%E3%80%91',
     icon: FaEnvelope,
   },
 ];
