@@ -10,7 +10,7 @@ type MobileMenu = {
 const MobileMenu: FC<MobileMenu> = ({ showMenu }) => {
   return (
     <aside
-      className="fixed h-screen pt-24 px-6 py-0 flex-shrink-0 w-full bg-white z-10 md:hidden transition-transform duration-300 ease-out"
+      className="fixed top-0 bg-gray-50 min-h-screen pt-24 px-6 py-0 flex-shrink-0 w-full z-10 md:hidden transition-transform duration-300 ease-out dark:bg-gray-900"
       style={{ transform: showMenu ? 'translateX(0)' : 'translateX(100vw)' }}
     >
       <SearchBox isMobileMenu={true} />
@@ -19,9 +19,7 @@ const MobileMenu: FC<MobileMenu> = ({ showMenu }) => {
           navLinks.map((link) => (
             <li key={link.id}>
               <Link href={link.url}>
-                <a className="text-base text-gray-600 no-underline hover:opacity-75">
-                  {link.text}
-                </a>
+                <a className="text-base">{link.text}</a>
               </Link>
             </li>
           ))}
