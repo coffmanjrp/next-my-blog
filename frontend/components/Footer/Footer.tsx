@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { IconContainer } from '@/components/index';
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 type Footer = {
   title: string;
@@ -37,6 +37,9 @@ const Footer: FC<Footer> = ({ title }) => {
             rel="noreferrer noopener"
           >
             <IconContainer icon={<FaLinkedin />} />
+          </a>
+          <a href="mailto:coffmanjrp@gmail.com" className="block text-2xl">
+            <IconContainer icon={<FaEnvelope />} />
           </a>
         </div>
       </div>
