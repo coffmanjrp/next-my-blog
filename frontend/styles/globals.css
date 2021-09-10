@@ -23,7 +23,7 @@ h1 {
 }
 
 p {
-  @apply text-base text-gray-600 dark:text-gray-50;
+  @apply text-base text-gray-600 dark:text-gray-400;
 }
 
 button {

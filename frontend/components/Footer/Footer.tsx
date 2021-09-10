@@ -7,7 +7,7 @@ type Props = {
 
 const Footer: FC<Props> = ({ title }) => {
   return (
-    <footer className="bg-gray-50 mt-24 max-w-screen-md w-full mx-auth pt-4 pb-16 z-20 dark:bg-gray-900">
+    <footer className="mx-auto pt-4 pb-16 bg-gray-50 max-w-screen-md w-full z-20 dark:bg-gray-900">
       <div className="flex justify-between flex-col-reverse md:flex-row items-center">
         <p>
           {new Date().getFullYear()} &copy; {title}

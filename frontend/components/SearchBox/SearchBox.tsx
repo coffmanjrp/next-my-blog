@@ -11,6 +11,7 @@ const SearchBox: FC<Props> = ({ isMobileMenu }) => {
         <input
           type="search"
           className="appearance-none border rounded py-2 px-3 leading-tight w-full focus:outline-none focus:ring"
+          aria-label="Search"
           placeholder="Search"
           spellCheck={false}
         />
